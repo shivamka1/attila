@@ -455,6 +455,83 @@ img[src$="#full"] {
 	padding: 4em 0;
 	text-align: center;
 }
+.home-wrapper {
+	display: grid;
+	grid-template-columns: 300px 1fr 300px;
+	max-width: 1400px;
+	margin: 0 auto;
+}
+.home-sidebar {
+	grid-column: 1;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	padding: 9em 0 2em 2em;
+	position: sticky;
+	top: 0;
+	align-self: flex-start;
+}
+.home-main {
+	grid-column: 2;
+	min-width: 0;
+}
+.author-avatar {
+	width: 180px;
+	height: 180px;
+	min-width: 180px;
+	min-height: 180px;
+	max-width: 180px;
+	border-radius: 50%;
+	object-fit: cover;
+	display: block;
+	box-shadow: 0 0 0 4px $color-white, 0 0 0 5px $color-gray-90;
+}
+.author-avatar-placeholder {
+	width: 180px;
+	height: 180px;
+	border-radius: 50%;
+	background: $color-gray-90;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 0.75em;
+	color: $color-blue-30;
+}
+.social-svg-icon {
+	width: 32px !important;
+	height: 32px !important;
+	max-width: 32px !important;
+	display: block;
+	opacity: 1;
+	filter: brightness(0);
+	&:hover { opacity: 0.45; }
+}
+.social-svg-icon-lg {
+	width: 36px !important;
+	height: 36px !important;
+	max-width: 36px !important;
+}
+.blog-header-social {
+	display: flex;
+	align-items: center;
+	gap: 0.6em;
+	margin-top: 0.8em;
+	width: 180px;
+	justify-content: center;
+	a {
+		text-decoration: none;
+		display: flex;
+		align-items: center;
+	}
+}
+@media only screen and (max-width: 960px) {
+	.home-wrapper {
+		grid-template-columns: 1fr;
+	}
+	.home-sidebar {
+		display: none;
+	}
+}
 #blog-header:after {
 	position: absolute;
 	width: 32em;
@@ -539,7 +616,7 @@ img[src$="#full"] {
 	z-index: 10;
 	margin: 0;
 	padding: 0;
-	font-family: 'Fira Sans', sans-serif;
+	font-family: 'Host Grotesk', sans-serif;
 	font-weight: 700;
 	font-size: 2em;
 	line-height: 1em;
@@ -547,7 +624,6 @@ img[src$="#full"] {
 }
 .home-template .blog-name {
 	font-size: 2.5em;
-    font-family: unset;
 }
 .has-cover .blog-name {
 	color: $color-white;
@@ -568,7 +644,7 @@ img[src$="#full"] {
 }
 .home-template .blog-description {
 	font-size: 1.6em !important;
-	font-family: monospace;
+	font-family: 'Poiret One', sans-serif;
 }
 .has-cover .blog-description {
 	color: $color-white;

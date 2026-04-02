@@ -31,6 +31,12 @@ module.exports = function (grunt) {
                     expand: true
                 },
                 {
+                    dest: './stage/attila/assets/svg/',
+                    src: '*',
+                    cwd: 'src/assets/svg/',
+                    expand: true
+                },
+                {
                     dest: './stage/attila/',
                     src: ['**/*.hbs',
                         '!node_modules/**',
