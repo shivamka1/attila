@@ -126,7 +126,7 @@ ol > li:before {
 }
 ul > li:before {
 	margin-top: 0.25em;
-	content: '*';
+	content: '•';
 }
 ol {
 	list-style-type: none;
@@ -135,6 +135,7 @@ ol {
 ol > li:before {
 	content: counter(item) ". " !important;
 	counter-increment: item;
+	font-weight: 400;
 }
 
 ol ol, ul ul, ul ol, ol ul {
@@ -219,65 +220,47 @@ mark {
 }
 code, tt {
 	position: relative;
-	margin: 0 0.334em;
-	padding: 0.334em 0.667em;
-	font-family: monospace, sans-serif;
-	font-size: 0.75em;
-	white-space: pre;
-	background: $color-gray-98;
-  //border: 1px solid $color-gray-90;
-	top: -2px;
+	margin: 0 0.2em;
+	padding: 0.2em 0.4em;
+	font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+	font-size: 0.85em;
+	background: #f8f8f8;
+	border: none;
+	border-radius: 4px;
+	top: 0;
 }
 
 pre {
 	position: relative;
 	margin: 0 0 2em;
-	padding: 1em;
+	padding: 0;
 	overflow: hidden;
-	font-family: monospace, sans-serif;
-	white-space: pre;
-	background: $color-gray-98;
-  border: 1px solid $color-gray-90;
+	background: #ffffff;
+	border: 1px solid #f5f5f3;
+	border-radius: 6px;
 	box-sizing: border-box;
 }
 pre .lines {
-	position: absolute;
-	width: 2.667em;
-	height: 100%;
-	left: 0;
-	top: 0;
-	padding: 1.334em 0;
-	border-right: 1px solid $color-gray-90;
-	font-size: 0.75em;
-	line-height: 2em;
-	text-align: right;
-	box-sizing: border-box;
-	background: rgba(255,255,255,0.5);
+	display: none;
 }
-pre .lines .line {
-	display: block;
-	padding-right: 0.334em;
-    color: $color-blue-30;
-}
-
 pre code, pre tt {
-  display: block;
+	display: block;
 	position: static;
 	top: auto;
-	margin: -1.334em -1.334em -1.334em 1.334em;
-	padding: 1.334em;
-	overflow: scroll;
-	font-size: 0.75em;
-	line-height: 2em;
+	margin: 0;
+	padding: 1.2em 1.4em;
+	overflow: auto;
+	font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+	font-size: 0.775em;
+	line-height: 1.6em;
 	white-space: pre;
 	background: transparent;
 	border: none;
+	border-radius: 0;
 	vertical-align: inherit;
 }
 pre code.language-text {
-  overflow: hidden;
-  white-space: normal;
-  margin-left: -1.334em;
+	white-space: pre-wrap;
 }
 
 kbd {
@@ -554,13 +537,29 @@ img[src$="#full"] {
 	background: $color-gray-90;
 }
 #blog-header:before {
+	content: none;
+}
+.post-count {
 	position: absolute;
 	left: 50%;
-	bottom: 0;
-	margin-left: -2em;
-	margin-bottom: 7px;
-	content: 'Posts: ' attr(data-name);
+	bottom: 0.6em;
+	transform: translateX(-50%);
+	text-align: center;
 	font-family: monospace;
+	white-space: nowrap;
+}
+.post-count-number {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	min-width: 1.6em;
+	height: 1.6em;
+	padding: 0 0.4em;
+	background: $color-black;
+	color: $color-white;
+	border-radius: 1em;
+	font-size: 0.9em;
+	font-weight: 600;
 }
 #blog-header.hide-posts:before {
 	position: absolute;

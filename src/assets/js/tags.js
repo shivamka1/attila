@@ -25,9 +25,12 @@ if($canvas){
             fontWeight: 'bold',
             fontFamily: 'Cardo',
             rotateRatio: 0,
-            color: '#7e868e',
+            color: '#cdd2d6',
             click: function(item) {
                 window.location.href = "./../tag/" + name_slug_map[item[0]];
+            },
+            hover: function(item) {
+                $canvas.style.cursor = item ? 'pointer' : 'default';
             },
         }
         WordCloud(document.getElementById('word_cloud'), options);

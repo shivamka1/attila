@@ -123,7 +123,7 @@ module.exports = function (grunt) {
             js: {
                 files: {
                     './stage/attila/assets/<%=  config.jsTargetDir %>/vendor.js': ['<%=  config.jsSrcDir %>/libs/jquery-*.js', '<%=  config.jsSrcDir %>/libs/wordcloud2.js'],
-                    './stage/attila/assets/<%=  config.jsTargetDir %>/script.js': ['<%=  config.jsSrcDir %>/**/*.js'],
+                    './stage/attila/assets/<%=  config.jsTargetDir %>/script.js': ['<%=  config.jsSrcDir %>/**/*.js', '!<%=  config.jsSrcDir %>/libs/highlight.pack.js'],
                 }
             }
         },
