@@ -153,14 +153,15 @@ hr {
 
 blockquote {
     margin: 0 0 2em;
-    padding: 1em;
+    padding: 0 1em;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    border-left: 0.25em solid $color-gray-90;
+    border-left: 0.25em solid #f5f5f3;
     font-style: italic;
     font-weight: 400;
+    font-size: 1.15em;
     color: $color-blue-30;
-    background: $color-gray-98;
+    background: transparent;
 }
 blockquote p {
 	margin: 0 0 1em;
@@ -307,7 +308,7 @@ table td {
     padding: 0.5em;
     line-height: 0.95em;
     text-align: left;
-//    border: 1px solid $color-gray-90;
+    border: 1px solid #f5f5f3;
 }
 table th {
 	font-family: 'Fira Sans', sans-serif;
@@ -316,6 +317,7 @@ table th {
 	line-height: 1.25em;
 	padding: 0.667em;
 	color: $color-black;
+	background: #fcfcfb;
 }
 table td:after {
 	position: absolute;
@@ -326,7 +328,13 @@ table td:after {
 	padding: 1px;
 	z-index: -1;
 	content: '';
-	background: $color-gray-98;
+	background: transparent;
+}
+table tr:nth-child(odd) td {
+	background: $color-white;
+}
+table tr:nth-child(even) td {
+	background: #fcfcfb;
 }
 
 
@@ -485,6 +493,9 @@ img[src$="#full"] {
 	object-fit: cover;
 	display: block;
 	box-shadow: 0 0 0 4px $color-white, 0 0 0 5px $color-gray-90;
+	filter: saturate(0.5);
+	transition: filter 0.3s ease;
+	&:hover { filter: saturate(1); }
 }
 .author-avatar-placeholder {
 	width: 180px;
