@@ -1045,7 +1045,7 @@ img[src$="#full"] {
 
 #post-header {
 	position: relative;
-	padding-top: 6em;
+	padding-top: 8em;
 }
 #post-header.has-cover {
 	padding: 16em 0 2em;
@@ -1077,6 +1077,35 @@ img[src$="#full"] {
 .post {
 	position: relative;
 	z-index: 10;
+}
+.post-home-btn {
+	display: none;
+}
+.post-go-back {
+	position: absolute;
+	top: -5.5em;
+	left: 2.5em;
+	display: inline-block;
+	padding: 0.05em 1em;
+	border: 1px solid $color-gray-90;
+	border-radius: 8px;
+	font-size: 0.75em;
+	color: $color-blue-15;
+	text-decoration: none;
+	background: $color-white;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+	transition: border-color 0.2s ease;
+	&:hover { border-color: $color-blue-80; }
+}
+.post-home-icon {
+	width: 36px !important;
+	height: 36px !important;
+	max-width: 36px !important;
+	display: block;
+	opacity: 1;
+	filter: brightness(0);
+	transition: opacity 0.2s ease;
+	&:hover { opacity: 0.35; }
 }
 .post-title {
 	position: relative;
