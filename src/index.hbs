@@ -1,18 +1,11 @@
 {{!< default}}
 {{#get "posts" limit='all'}}
-	<header id="blog-header" {{#if @blog.cover_image}} class="has-cover"{{/if}} data-name="{{posts.length}}">
+	<header id="blog-header" {{#if @site.cover_image}} class="has-cover"{{/if}} data-name="{{posts.length}}">
 		<div class="inner">
 			<nav id="navigation">
-				{{!-- <span class="blog-logo">
-					<a href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="{{t "Blog Logo"}}" /></a>
-				</span> --}}
-				<span id="menu-button" class="nav-button">
-					<!--<a class="menu-button"><i class="ic ic-menu"></i> Menu</a>-->
-					<a class="menu-button"><i class="fas fa-bars"></i></a>
-				</span>
 			</nav>
-			<h1 class="blog-name">{{@blog.title}}</h1>
-			<span class="blog-description">{{@blog.description}}</span>
+			<h1 class="blog-name">{{@site.title}}</h1>
+			<span class="blog-description">{{@site.description}}</span>
 		</div>
 	</header>
 {{/get}}

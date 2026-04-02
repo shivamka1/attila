@@ -9,21 +9,6 @@
 <header id="post-header"{{#if feature_image}} class="has-cover" {{/if}}>
 	<div class="inner">
 		<nav id="navigation">
-			{{!-- {{#if @blog.logo}}
-			<span class="blog-logo">
-				<a href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="{{t "Blog Logo"}}" /></a>
-			</span>
-			{{else}}
-			<span id="home-button" class="nav-button">
-				<a class="home-button" href="{{@blog.url}}" title="{{t "Home"}}"><i class="ic ic-arrow-left"></i> {{t "Home"}}</a>
-			</span>
-			{{/if}} --}}
-			{{#if @blog.navigation}}
-			<span id="menu-button" class="nav-button">
-				<!--<a class="menu-button"><i class="ic ic-menu"></i> {{t "Menu"}}</a>-->
-				<a class="menu-button"><i class="fas fa-bars"></i></a>
-			</span>
-			{{/if}}
 		</nav>
 		<h1 class="post-title">{{{title}}}</h1>
 		<span class="post-meta"><!--{{authors separator=", "}} | --><time datetime="{{date format='YYYY-MM-DD'}}">{{date format="MMM DD, YYYY"}}</time> . {{reading_time}}</span>
@@ -66,7 +51,7 @@
 						<p class="post-authors-authors">{{authors separator=", "}}</p>
 					</aside>
         {{else}}
-					{{#author}}
+					{{#primary_author}}
 						<aside class="post-author">
 							<figure class="post-author-avatar avatar">
 								{{#if profile_image}}
@@ -94,7 +79,7 @@
 							</div>
 							<div class="clear"></div>
 						</aside>
-					{{/author}}
+					{{/primary_author}}
         {{/has}}
 
 			</section>
