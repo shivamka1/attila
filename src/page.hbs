@@ -3,9 +3,10 @@
 {{#post}}
 
 <header id="post-header"{{#if cover_image}} class="has-cover" {{/if}}>
-	<div class="inner">
+	<div class="inner" style="position: relative;">
 		<nav id="navigation">
 		</nav>
+		<a href="/" class="post-go-back">Go Back</a>
 		{{#if @page.show_title_and_feature_image}}
 		<h1 class="post-title">{{{title}}}</h1>
 		{{#if cover_image}}<div class="post-cover cover" style="background-image: url('{{img_url cover_image}}');"></div>{{/if}}

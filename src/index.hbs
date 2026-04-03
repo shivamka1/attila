@@ -10,12 +10,16 @@
 					<div class="author-avatar author-avatar-placeholder">{{name}}</div>
 				{{/if}}
 				<div class="blog-header-social">
-					<a href="https://www.pometry.com/" target="_blank"><img src="{{asset "assets/svg/building-solid-full.svg"}}" class="social-svg-icon" alt="Pometry" /></a>
+					<a href="https://shivamkapoor.com/about/"><img src="{{asset "assets/svg/circle-user-solid-full.svg"}}" class="social-svg-icon social-svg-icon-lg" alt="About" /></a>
 					<a href="https://github.com/shivamka1" target="_blank"><img src="{{asset "assets/svg/github-brands-solid-full.svg"}}" class="social-svg-icon social-svg-icon-lg" alt="GitHub" /></a>
 					<a href="http://www.shivamkapoor.com/rss" target="_blank"><img src="{{asset "assets/svg/square-rss-solid-full.svg"}}" class="social-svg-icon social-svg-icon-lg" alt="RSS" /></a>
+					<a href="/bookshelf/"><img src="{{asset "assets/svg/readme-brands-solid-full.svg"}}" class="social-svg-icon social-svg-icon-lg" alt="Bookshelf" /></a>
 				</div>
-			{{/foreach}}
-		{{/get}}
+					{{#if location}}
+						<div class="sidebar-location"><i class="fa-solid fa-location-dot"></i> {{location}}</div>
+					{{/if}}
+				{{/foreach}}
+			{{/get}}
 	</aside>
 
 	<div class="home-main">

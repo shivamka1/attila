@@ -59,6 +59,10 @@ a:hover,
 a:focus {
 	color: $color-black;
 }
+.post-tags a:hover,
+.post-tags a:focus {
+	color: $color-white !important;
+}
 
 h1, h2, h3, h4, h5, h6 {
 	font-family: 'Fira Sans', sans-serif;
@@ -498,13 +502,28 @@ img[src$="#full"] {
 	display: block;
 	opacity: 1;
 	filter: brightness(0);
-	&:hover { opacity: 0.45; }
+	transition: opacity 0.2s ease;
+	&:hover { opacity: 0.65; }
 }
 .social-svg-icon-lg {
 	width: 36px !important;
 	height: 36px !important;
 	max-width: 36px !important;
 }
+.sidebar-location {
+	margin-top: -0.7em;
+	font-size: 0.875em;
+	color: #999;
+	display: flex;
+	align-items: center;
+	gap: 0.4em;
+	width: 180px;
+	justify-content: flex-start;
+	padding-left: 0.55em;
+	font-family: 'Fira Sans', sans-serif;
+	i { font-size: 1.35em; }
+}
+
 .blog-header-social {
 	display: flex;
 	align-items: center;
@@ -1217,13 +1236,13 @@ img[src$="#full"] {
 	height: auto;
 }
 .post-share .twitter {
-	background-color: $color-social-twitter;
+	background-color: $color-black;
 }
 .post-share .facebook {
 	background-color: $color-social-facebook;
 }
-.post-share .googleplus {
-	background-color: $color-social-googleplus;
+.post-share .linkedin {
+	background-color: #0077b5;
 }
 .post-tags {
 	max-width: 75%;
@@ -1235,21 +1254,22 @@ img[src$="#full"] {
 	margin: 0 0.334em 0.667em 0;
 	padding: 0.575em 1em;
 	background: $color-white;
-	border: 1px solid $primary-color;
+	border: 1px solid #7096c8;
 	font-size: 0.75em;
 	font-weight: 500;
 	line-height: 1.334em;
 	text-align: center;
 	text-decoration: none;
-	color: $primary-color;
-	border-radius: 2em;
+	color: #4a6fa5 !important;
+	border-radius: 6px;
 	transition: all ease 0.3s;
 	box-sizing: border-box;
 }
 .post-tags a:hover,
 .post-tags a:focus {
-	background: $primary-color;
-	color: $color-white;
+	background: #4a6fa5 !important;
+	border-color: #4a6fa5 !important;
+	color: $color-white !important;
 }
 
 /* ==========================================================================
@@ -1308,6 +1328,9 @@ img[src$="#full"] {
 }
 .post-author-about {
 	margin: 0.667em 0 0.334em;
+	font-family: 'Bai Jamjuree', sans-serif;
+	font-size: 1.1em;
+	line-height: 1.5em;
 }
 .post-author-bio span {
 	position: relative;
